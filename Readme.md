@@ -7,12 +7,15 @@ Que. Create a product object. Define a product with properties for name, price, 
 typescript
 
 ```typescript
-const productObj = {
+const productObj: {
+  name: string;
+  price: number;
+  quantity: number;
+} = {
   name: "Laptop",
   price: 10000,
   quantity: 5,
 };
 
 console.log(productObj);
-
 ```
