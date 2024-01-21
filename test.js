@@ -1,11 +1,18 @@
-function add(a, b, c) {
-    console.log(typeof a);
-    console.log(typeof b);
-    console.log(typeof c);
-}
-var result1 = add(5, "Ashutosh", true);
-var result2 = add("Hello", 5, false);
-var addTwo = function (num1, num2) {
-    return num1 + num2;
+var product1 = {
+    name: "Laptop",
+    price: 1000,
+    quantity: 5,
 };
-console.log(addTwo(5, 10));
+var product2 = {
+    name: "PC",
+    price: 20000,
+    quantity: 10,
+};
+// calculate total price
+var calculateTotalPrice = function (product) {
+    var price = product.price, quantity = product.quantity;
+    return price * quantity;
+};
+// call
+console.log(calculateTotalPrice(product1));
+console.log(calculateTotalPrice(product2));

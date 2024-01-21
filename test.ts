@@ -1,14 +1,29 @@
-function add<T, U>(a: T, b: U, c: boolean) {
-  console.log(typeof a);
-  console.log(typeof b);
-  console.log(typeof c);
+interface Products {
+  name: string;
+  price: number;
+  quantity: number;
 }
 
-const result1 = add<number, string>(5, "Ashutosh", true);
-const result2 = add<string, number>("Hello", 5, false);
-
-const addTwo = (num1: number, num2: number) => {
-  return num1 + num2;
+const product1: Products = {
+  name: "Laptop",
+  price: 1000,
+  quantity: 5,
 };
 
-console.log(addTwo(5, 10));
+const product2: Products = {
+  name: "PC",
+  price: 20000,
+  quantity: 10,
+};
+
+// calculate total price
+
+const calculateTotalPrice = (product: Products): number => {
+  const { price, quantity } = product;
+  return price * quantity;
+};
+
+// call
+
+console.log(calculateTotalPrice(product1));
+console.log(calculateTotalPrice(product2));
